@@ -1,0 +1,141 @@
+<!--
+如果没有引用以下文件，请去掉此注释
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+-->
+<div class="king-layout-container" id="layoutPanel">
+    <!-- header -->
+    <nav>
+        <div class="navbar king-horizontal-nav1" id="nav1_demo1">
+            <div class="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://magicbox.bk.tencent.com/static_api/v3/bk/images/logo.png" class="logo">
+                    </a>
+                </div>
+                <ul class="nav navbar-nav pull-left">
+                    <li class="active"><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">关于我们</a></li>
+                    <li><a href="javascript:;">最新资讯</a></li>
+                    <li><a href="javascript:;">联系我们</a></li>
+                </ul>
+                <div class="navbar-header pull-right">
+                    <ul class="nav">
+                        <li class="user-info">
+                            <a href="javascript:;">
+                                <img class="img-rounded" src="https://magicbox.bk.tencent.com/static_api/v3/components/horizontal_nav1/images/avatar.png">
+                                <span>admin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--  -->
+    <div class="king-layout-main">
+        <div class="king-breadcrumb">
+            <span class="king-breadcrumb-link">Home</span>
+            <span class="king-breadcrumb-separator">/</span>
+            <span class="king-breadcrumb-link">List</span>
+            <span class="king-breadcrumb-separator">/</span>
+            <span class="king-breadcrumb-link">App</span>
+        </div>
+        <div class="king-layout-content king-layout-has-slider king-flexible-setting king-flex-auto king-content-scroll">
+            <div class="king-layout-slider">
+                <ul class="king-menu-inline">
+                    <li class="king-menu-submenu">
+                        <div class="king-menu-submenu-title">
+                            <span class="glyphicon glyphicon-th-large submenu-icon" aria-hidden="true"></span>分类一
+                            <span class="glyphicon glyphicon-menu-up fr up-down-icon" aria-hidden="true"></span>
+                        </div>
+                        <ul class="king-menu-inline king-menu-item-list default-list" style="display: none;">
+                            <li class="king-menu-item king-menu-item-selected">option1</li>
+                            <li class="king-menu-item">option2</li>
+                            <li class="king-menu-item">option3</li>
+                            <li class="king-menu-item">option4</li>
+                        </ul>
+                    </li>
+                    <li class="king-menu-submenu">
+                        <div class="king-menu-submenu-title">
+                            <span class="glyphicon glyphicon-th-large submenu-icon" aria-hidden="true"></span>分类二
+                            <span class="glyphicon glyphicon-menu-up fr up-down-icon" aria-hidden="true"></span>
+                        </div>
+                        <ul class="king-menu-inline king-menu-item-list" style="display: none;">
+                            <li class="king-menu-item">option1</li>
+                            <li class="king-menu-item">option2</li>
+                            <li class="king-menu-item">option3</li>
+                            <li class="king-menu-item">option4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="king-slider-content king-flex-y">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="width: 10px">#</th>
+                            <th style="width:20%;">任务</th>
+                            <th>进度</th>
+                            <th>开发者</th>
+                            <th>结束时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>版本更新</td>
+                            <td>
+                                完成
+                            </td>
+                            <td>管理员</td>
+                            <td>2015-09-20</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>数据备份</td>
+                            <td>
+                                70%
+                            </td>
+                            <td>管理员</td>
+                            <td>2015-09-20</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>定时任务</td>
+                            <td>
+                                未开始
+                            </td>
+                            <td>管理员</td>
+                            <td>2015-09-20</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>修复bug</td>
+                            <td>
+                                已结束
+                            </td>
+                            <td>管理员</td>
+                            <td>2015-09-20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="king-layout-footer"> Copyright © 2012-2017 Tencent BlueKing. All Rights Reserved. 蓝鲸智云 版权所有</div>
+</div>
+<script type="text/javascript">
+    $(".king-menu-submenu-title").click(function(){
+        $(this).parent().toggleClass("show-items");
+        $(this).next().slideToggle();
+    })
+
+    $(".king-menu-item").click(function(){
+        $(".king-menu-item").removeClass("king-menu-item-selected");
+        $(this).addClass("king-menu-item-selected");
+    })
+</script>
