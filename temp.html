@@ -3,3 +3,174 @@
 </div>
 
 
+<!--
+如果没有引用以下文件，请去掉此注释
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+-->
+<div class="panel panel-default pannel-overflow panel-tables table7_demo">
+    <div class="panel-heading"> <i class="fa fa-list-ul"></i> 变量列表
+    </div>
+    <div class="panel-body panel-search-body">
+        <a class="king-btn king-radius king-primary" title="添加变量">添加变量</a>
+        <a class="king-btn king-radius king-default" title="数据导入">数据导入</a>
+        <a class="king-btn king-radius king-default" title="数据导出">数据导出</a>
+    </div>
+    <div class="panel-content">
+        <table class="table table-header-bg table-hover mb0" id="table_demo2">
+            <thead>
+                <tr>
+                    <th style="width: 25px">
+                        <input type="checkbox" name="checkall" value="">
+                    </th>
+                    <th style="width: 100px">FuncID</th>
+                    <th style="width:25%">key</th>
+                    <th style="width:25%">作用域</th>
+                    <th style="width:15%">值</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" value="">
+                    </td>
+                    <td>1</td>
+                    <td>TclsWorldID</td>
+                    <td>s1.*.*.*</td>
+                    <td>abc</td>
+                    <td>
+                        <button class="btn btn-xs btn-primary" title="编辑">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                        <button class="btn btn-xs btn-danger" title="删除">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="">
+                    </td>
+                    <td>1</td>
+                    <td>TclsWorldID</td>
+                    <td>s1.*.*.*</td>
+                    <td>abc</td>
+                    <td>
+                        <button class="btn btn-xs btn-primary" title="编辑">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                        <button class="btn btn-xs btn-danger" title="删除">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="">
+                    </td>
+                    <td>1</td>
+                    <td>TclsWorldID</td>
+                    <td>s1.*.*.*</td>
+                    <td>abc</td>
+                    <td>
+                        <button class="btn btn-xs btn-primary" title="编辑">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                        <button class="btn btn-xs btn-danger" title="删除">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="">
+                    </td>
+                    <td>1</td>
+                    <td>TclsWorldID</td>
+                    <td>s1.*.*.*</td>
+                    <td>abc</td>
+                    <td>
+                        <button class="btn btn-xs btn-primary" title="编辑">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                        <button class="btn btn-xs btn-danger" title="删除">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="">
+                    </td>
+                    <td>1</td>
+                    <td>TclsWorldID</td>
+                    <td>s1.*.*.*</td>
+                    <td>abc</td>
+                    <td>
+                        <button class="btn btn-xs btn-primary" title="编辑">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                        <button class="btn btn-xs btn-danger" title="删除">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="">
+                    </td>
+                    <td>1</td>
+                    <td>TclsWorldID</td>
+                    <td>s1.*.*.*</td>
+                    <td>abc</td>
+                    <td>
+                        <button class="btn btn-xs btn-primary" title="编辑">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                        <button class="btn btn-xs btn-danger" title="删除">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <div class="pull-left">
+                            <a class="king-btn king-radius king-danger ml10" id="deleteAll" title="删除">删除</a>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script type="text/javascript">
+        $('#table_demo2').find('input[name="checkall"]').click(function(){
+                var checked = $(this).prop('checked');
+                $('#table_demo2>tbody input').prop('checked', checked);
+            });
+            $('#table_demo2').find(':checkbox').on('click', function(){
+                if(!this.checked){
+                    $('#table_demo2').find('input[name="checkall"]').prop('checked',false);
+                }
+            });
+            $('#table_demo2').find('.glyphicon-remove').parent('button').click(function(){
+                if(confirm('确定要删除？')){
+                    $(this).closest('tr').remove();
+                }
+            });
+            $('#deleteAll').click(function(event) {
+                var records = $('#table_demo2>tbody input:checked').closest('tr');
+                if (!records.length){
+                    alert('请选择要删除的记录！');
+                    return false;
+                }
+                if(confirm('确定要删除？')){
+                    records.remove();
+                }
+            });
+    </script>
+</div>
