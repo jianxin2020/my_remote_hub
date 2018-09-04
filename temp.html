@@ -174,3 +174,21 @@
             });
     </script>
 </div>
+
+
+
+<!--
+如果没有引用以下文件，请去掉此注释
+<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/topbar-1.0/topbar.js"></script>
+-->
+<button id="plugin25_demo5" class="king-btn mb15 mr100 king-default">3秒后关闭</button>
+<script type="text/javascript">
+    $('.king-default').click(function (){
+        $topBar({
+            text:'提示条将在3秒后关闭',
+            setClass:'bg-violet',
+            timeOut:3000
+        });
+    });
+</script>
