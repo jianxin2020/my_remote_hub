@@ -1,194 +1,134 @@
-<div class="tc bc pt15 pb15 loading-box">
-    <img alt="loadding" src="https://magicbox.bk.tencent.com/static_api/v3/components/loading1/images/loading_2_24x24.gif"> 数据加载中,请稍候...
-</div>
 
 
-<!--
-如果没有引用以下文件，请去掉此注释
 <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
 <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
--->
-<div class="panel panel-default pannel-overflow panel-tables table7_demo">
-    <div class="panel-heading"> <i class="fa fa-list-ul"></i> 变量列表
-    </div>
-    <div class="panel-body panel-search-body">
-        <a class="king-btn king-radius king-primary" title="添加变量">添加变量</a>
-        <a class="king-btn king-radius king-default" title="数据导入">数据导入</a>
-        <a class="king-btn king-radius king-default" title="数据导出">数据导出</a>
-    </div>
-    <div class="panel-content">
-        <table class="table table-header-bg table-hover mb0" id="table_demo2">
-            <thead>
-                <tr>
-                    <th style="width: 25px">
-                        <input type="checkbox" name="checkall" value="">
-                    </th>
-                    <th style="width: 100px">FuncID</th>
-                    <th style="width:25%">key</th>
-                    <th style="width:25%">作用域</th>
-                    <th style="width:15%">值</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/jquery-tabledit-1.2.3/jquery.tabledit.js"></script>
 
-                <tr>
-                    <td>
-                        <input type="checkbox" value="">
-                    </td>
-                    <td>1</td>
-                    <td>TclsWorldID</td>
-                    <td>s1.*.*.*</td>
-                    <td>abc</td>
-                    <td>
-                        <button class="btn btn-xs btn-primary" title="编辑">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </button>
-                        <button class="btn btn-xs btn-danger" title="删除">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" value="">
-                    </td>
-                    <td>1</td>
-                    <td>TclsWorldID</td>
-                    <td>s1.*.*.*</td>
-                    <td>abc</td>
-                    <td>
-                        <button class="btn btn-xs btn-primary" title="编辑">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </button>
-                        <button class="btn btn-xs btn-danger" title="删除">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" value="">
-                    </td>
-                    <td>1</td>
-                    <td>TclsWorldID</td>
-                    <td>s1.*.*.*</td>
-                    <td>abc</td>
-                    <td>
-                        <button class="btn btn-xs btn-primary" title="编辑">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </button>
-                        <button class="btn btn-xs btn-danger" title="删除">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" value="">
-                    </td>
-                    <td>1</td>
-                    <td>TclsWorldID</td>
-                    <td>s1.*.*.*</td>
-                    <td>abc</td>
-                    <td>
-                        <button class="btn btn-xs btn-primary" title="编辑">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </button>
-                        <button class="btn btn-xs btn-danger" title="删除">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" value="">
-                    </td>
-                    <td>1</td>
-                    <td>TclsWorldID</td>
-                    <td>s1.*.*.*</td>
-                    <td>abc</td>
-                    <td>
-                        <button class="btn btn-xs btn-primary" title="编辑">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </button>
-                        <button class="btn btn-xs btn-danger" title="删除">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" value="">
-                    </td>
-                    <td>1</td>
-                    <td>TclsWorldID</td>
-                    <td>s1.*.*.*</td>
-                    <td>abc</td>
-                    <td>
-                        <button class="btn btn-xs btn-primary" title="编辑">
-                            <i class="glyphicon glyphicon-edit"></i>
-                        </button>
-                        <button class="btn btn-xs btn-danger" title="删除">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="6">
-                        <div class="pull-left">
-                            <a class="king-btn king-radius king-danger ml10" id="deleteAll" title="删除">删除</a>
-                        </div>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-    <script type="text/javascript">
-        $('#table_demo2').find('input[name="checkall"]').click(function(){
-                var checked = $(this).prop('checked');
-                $('#table_demo2>tbody input').prop('checked', checked);
-            });
-            $('#table_demo2').find(':checkbox').on('click', function(){
-                if(!this.checked){
-                    $('#table_demo2').find('input[name="checkall"]').prop('checked',false);
-                }
-            });
-            $('#table_demo2').find('.glyphicon-remove').parent('button').click(function(){
-                if(confirm('确定要删除？')){
-                    $(this).closest('tr').remove();
-                }
-            });
-            $('#deleteAll').click(function(event) {
-                var records = $('#table_demo2>tbody input:checked').closest('tr');
-                if (!records.length){
-                    alert('请选择要删除的记录！');
-                    return false;
-                }
-                if(confirm('确定要删除？')){
-                    records.remove();
-                }
-            });
-    </script>
-</div>
+<table class="table table-bordered" id="example1">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>NICKNAME</th>
+            <th>FIRSTNAME</th>
+            <th>LASTNAME</th>
+            <th class="tabledit-toolbar-column"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="a_1">
+            <td><span class="tabledit-span tabledit-identifier">1</span>
+                <input class="tabledit-input tabledit-identifier" type="hidden" name="aid" value="1" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">markcell</span>
+                <input class="tabledit-input  form-control input-sm" type="text" name="nickname" value="markcell" style="display: none;" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">Celso</span>
+                <input class="tabledit-input     form-control input-sm" type="text" name="firstname" value="Celso" style="display: none;" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">Marques</span>
+                <input class="tabledit-input        form-control input-sm" type="text" name="lastname" value="Marques" style="display: none;" disabled="">
+            </td>
+            <td style="white-space: nowrap; width: 1%;">
+                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
+                    <div class="btn-group btn-group-sm" style="float: none;">
+                        <button type="button" class="tabledit-edit-button btn btn-sm btn-default" style="float: none;"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button type="button" class="tabledit-delete-button btn btn-sm btn-default" style="float: none;"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                    <button type="button" class="tabledit-save-button btn btn-sm btn-success" style="display: none; float: none;">保存</button>
+                    <button type="button" class="tabledit-confirm-button btn btn-sm btn-danger" style="display: none; float: none;">确认</button>
 
+                </div>
+            </td>
+        </tr>
+        <tr id="a_2">
+            <td><span class="tabledit-span tabledit-identifier">2</span>
+                <input class="tabledit-input tabledit-identifier" type="hidden" name="aid" value="2" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">zikospeed</span>
+                <input class="tabledit-input   form-control input-sm" type="text" name="nickname" value="zikospeed" style="display: none;" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">António</span>
+                <input class="tabledit-input      form-control input-sm" type="text" name="firstname" value="António" style="display: none;" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">Figueiredo</span>
+                <input class="tabledit-input         form-control input-sm" type="text" name="lastname" value="Figueiredo" style="display: none;" disabled="">
+            </td>
+            <td style="white-space: nowrap; width: 1%;">
+                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
+                    <div class="btn-group btn-group-sm" style="float: none;">
+                        <button type="button" class="tabledit-edit-button btn btn-sm btn-default" style="float: none;"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button type="button" class="tabledit-delete-button btn btn-sm btn-default" style="float: none;"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                    <button type="button" class="tabledit-save-button btn btn-sm btn-success" style="display: none; float: none;">保存</button>
+                    <button type="button" class="tabledit-confirm-button btn btn-sm btn-danger" style="display: none; float: none;">确认</button>
 
+                </div>
+            </td>
+        </tr>
+        <tr id="a_3">
+            <td><span class="tabledit-span tabledit-identifier">3</span>
+                <input class="tabledit-input tabledit-identifier" type="hidden" name="aid" value="3" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">dotz</span>
+                <input class="tabledit-input    form-control input-sm" type="text" name="nickname" value="dotz" style="display: none;" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">Márcio</span>
+                <input class="tabledit-input       form-control input-sm" type="text" name="firstname" value="Márcio" style="display: none;" disabled="">
+            </td>
+            <td class="tabledit-view-mode"><span class="tabledit-span">Quental</span>
+                <input class="tabledit-input          form-control input-sm" type="text" name="lastname" value="Quental" style="display: none;" disabled="">
+            </td>
+            <td style="white-space: nowrap; width: 1%;">
+                <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
+                    <div class="btn-group btn-group-sm" style="float: none;">
+                        <button type="button" class="tabledit-edit-button btn btn-sm btn-default" style="float: none;"><span class="glyphicon glyphicon-pencil"></span></button>
+                        <button type="button" class="tabledit-delete-button btn btn-sm btn-default" style="float: none;"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                    <button type="button" class="tabledit-save-button btn btn-sm btn-success" style="display: none; float: none;">保存</button>
+                    <button type="button" class="tabledit-confirm-button btn btn-sm btn-danger" style="display: none; float: none;">确认</button>
 
-<!--
-如果没有引用以下文件，请去掉此注释
-<link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
-<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/topbar-1.0/topbar.js"></script>
--->
-<button id="plugin25_demo5" class="king-btn mb15 mr100 king-default">3秒后关闭</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
 <script type="text/javascript">
-    $('.king-default').click(function (){
-        $topBar({
-            text:'提示条将在3秒后关闭',
-            setClass:'bg-violet',
-            timeOut:3000
-        });
+    $('#example1').Tabledit({
+        url: "./demo.json",
+        rowKey: 'a_',
+        columns: {
+            identifier: [0, 'aid'],
+            editable: [
+                [1, 'nickname'], [2, 'firstname'], [3, 'lastname']
+            ]
+        },
+        restoreButton: false,
+        buttons: {
+            edit: {
+                class: 'btn btn-sm btn-default',
+                html: '<span class="glyphicon glyphicon-pencil"></span>',
+                action: 'edit'
+            },
+            delete: {
+                class: 'btn btn-sm btn-default',
+                html: '<span class="glyphicon glyphicon-trash"></span>',
+                action: 'delete'
+            },
+            save: {
+                class: 'btn btn-sm btn-success',
+                html: '保存'
+            },
+            confirm: {
+                class: 'btn btn-sm btn-danger',
+                html: '确认'
+            }
+        },
+        onSuccess: function (data, textStatus, jqXHR){
+            console.log('success');
+        },
+        onFail: function (jqXHR, textStatus, errorThrown){
+            console.log('fail');
+        }
     });
 </script>
