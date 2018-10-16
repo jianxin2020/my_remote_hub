@@ -29,3 +29,9 @@ function main(){
     fi
 }
 main $*
+
+
+
+
+
+cat /etc/passwd | awk -F":" 'BEGIN{a[1]="a1";a[2]="a2";b[1]="b1"}END{for(i in a){if(b[i]==""){b[i]=0};print i,a[i],b[i]}}'
